@@ -1,4 +1,4 @@
 euler.js
 ========
 
-Project Euler - JavaScript edition
+[Project Euler](http://projecteuler.net/) - JavaScript edition
