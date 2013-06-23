@@ -7,8 +7,8 @@
 
 function main() {
   var result = 0;
-  var i = 1000;
-  while (i--) {
+  var i = 1;
+  for (i; i < 1000; i++) {
     if (i % 3 === 0 || i % 5 === 0) {
       result += i;
     }
