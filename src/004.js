@@ -6,14 +6,14 @@
 //Find the largest palindrome made from the product of two 3-digit numbers.
 
 function main() {
-  var truthTest = false;
+  var isPalindrome = false;
   var current = 0;
   var max = 0;
-  for (var i = 100; i <= 1000; i++) {
-    for (var j = 100; j <= 1000; j++) {
+  for (var i = 100; i < 1000; i++) {
+    for (var j = 100; j < 1000; j++) {
       current = i * j;
-      truthTest = current.toString() === current.toString().split('').reverse().join('');
-      if (truthTest && current > max) {
+      isPalindrome = current.toString() === current.toString().split('').reverse().join('');
+      if (isPalindrome && current > max) {
         max = current;
       }
     }
