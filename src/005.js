@@ -6,17 +6,13 @@
 //What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
 function main() {
-  var i = 1;
+  var i = 20;
   var j = 1;
   var found = false;
-  while (i++) {
+  for (i; ; i += 20) {
     found = true;
     j = 1;
     for (j; j <= 20; j++) {
-      if (i % 19 !== 0) {
-        found = false;
-        break;
-      }
       if (i % j !== 0) {
         found = false;
         break;
