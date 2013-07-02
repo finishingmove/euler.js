@@ -5,21 +5,20 @@
 //
 //What is the largest prime factor of the number 600851475143 ?
 
-function main() {
-  var number = 600851475143;
-
-  function findLargestPrimeFactor(number) {
-    var largestPrimeFactor = 2;
-    while (number > largestPrimeFactor) {
-      if (number % largestPrimeFactor !== 0) {
-        largestPrimeFactor++;
-      }
-      if (number % largestPrimeFactor === 0) {
-        number = number / largestPrimeFactor;
-      }
+/**
+ *
+ * @param {Number} number
+ * @returns {Number}
+ */
+(function largestPrimeFactor(number) {
+  var result = 2;
+  while (number > result) {
+    if (number % result !== 0) {
+      result++;
     }
-    return largestPrimeFactor;
+    if (number % result === 0) {
+      number = number / result;
+    }
   }
-
-  return findLargestPrimeFactor(number);
-}
+  return result;
+})(600851475143);
