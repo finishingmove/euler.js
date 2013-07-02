@@ -5,13 +5,20 @@
 //
 //Find the sum of all the multiples of 3 or 5 below 1000.
 
-function main() {
-  var result = 0;
-  var i = 1;
-  for (i; i < 1000; i++) {
-    if (i % 3 === 0 || i % 5 === 0) {
-      result += i;
+/**
+ * @param {Number} limit
+ * @param {Array} paramList
+ * @returns {Number}
+ */
+(function sumOfMultiples(limit, paramList) {
+  var sum = 0;
+  for (var i = 1; i < limit; i++) {
+    for (var j = 0, length = paramList.length; j < length; j++) {
+      if (i % paramList[j] === 0) {
+        sum += i;
+        break;
+      }
     }
   }
-  return result;
-}
+  return sum;
+})(1000, [3, 5]);
