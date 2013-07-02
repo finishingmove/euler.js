@@ -7,12 +7,12 @@
 //
 //By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
 
-function main() {
+(function sumOfEvenFibonacci(limit) {
   var previousPrevious = 0;
   var previous = 0;
   var current = 1;
   var result = 0;
-  while (current < 4000000) {
+  while (current < limit) {
     if (current % 2 === 0) {
       result += current;
     }
@@ -21,4 +21,4 @@ function main() {
     current = previousPrevious + previous;
   }
   return result;
-}
+})(4000000);

@@ -11,14 +11,14 @@
  * @returns {Number}
  */
 (function sumOfMultiples(limit, paramList) {
-  var sum = 0;
+  var result = 0;
   for (var i = 1; i < limit; i++) {
     for (var j = 0, length = paramList.length; j < length; j++) {
       if (i % paramList[j] === 0) {
-        sum += i;
+        result += i;
         break;
       }
     }
   }
-  return sum;
+  return result;
 })(1000, [3, 5]);
