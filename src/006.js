@@ -27,6 +27,6 @@
   }
   squareOfSums = Math.pow(numbers.reduce(function(current, next) {
     return current + next;
-  }), 2);
+  }, 0), 2);
   return  squareOfSums - sumOfSquares;
 })();

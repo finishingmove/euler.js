@@ -11,14 +11,15 @@
  */
 (function main() {
   'use strict';
-  var isPalindrome = false;
+  var isPalindrome = function(number) {
+    return number.toString() === number.toString().split('').reverse().join('');
+  };
   var current = 0;
   var max = 0;
   for (var i = 100; i < 1000; i++) {
     for (var j = 100; j < 1000; j++) {
       current = i * j;
-      isPalindrome = current.toString() === current.toString().split('').reverse().join('');
-      if (isPalindrome && current > max) {
+      if (isPalindrome(current) && current > max) {
         max = current;
       }
     }
