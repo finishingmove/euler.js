@@ -9,13 +9,12 @@
 
 (function nthPrimeNumber(n) {
   'use strict';
-  var primes = [2, 3];
-  var current;
+  var count = 1;
+  var current = 2;
   var next;
   var isPrime;
-  while (primes.length < n) {
-    current = primes[primes.length - 1];
-    next = next || current + 1;
+  while (count <= n) {
+    next = next || current;
     isPrime = true;
     for (var i = 2; i < next; i++) {
       if (next % i === 0) {
@@ -24,9 +23,10 @@
       }
     }
     if (isPrime) {
-      primes.push(next);
+      count += 1;
+      current = next;
     }
     next % 2 ? next += 2 : next += 1;
   }
-  return primes[primes.length - 1];
+  return current;
 })(10001);
