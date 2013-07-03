@@ -5,7 +5,12 @@
 //
 //What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
 
-function main() {
+/**
+ *
+ * @returns {Number}
+ */
+(function main() {
+  'use strict';
   var i = 2520;
   var j = 1;
   var found = false;
@@ -22,4 +27,4 @@ function main() {
       return i;
     }
   }
-}
+})();

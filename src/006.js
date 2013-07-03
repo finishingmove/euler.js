@@ -10,7 +10,12 @@
 //Find the difference between the sum of the squares of the first one hundred
 //natural numbers and the square of the sum.
 
-function main() {
+/**
+ *
+ * @returns {Number}
+ */
+(function main() {
+  'use strict';
   var numbers = [];
   var sumOfSquares = 0;
   var squareOfSums = 0;
@@ -24,4 +29,4 @@ function main() {
     return current + next;
   }), 2);
   return  squareOfSums - sumOfSquares;
-}
+})();

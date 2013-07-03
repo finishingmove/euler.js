@@ -15,6 +15,7 @@
  * @returns {Number}
  */
 (function pythagoreanTripletProduct(perimeter) {
+  'use strict';
   var c = 1;
   for (var a = 1; a < perimeter; a++) {
     for (var b = 1; b < perimeter; b++) {

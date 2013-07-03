@@ -13,6 +13,7 @@
  * @returns {Number}
  */
 (function sumOfEvenFibonacci(limit) {
+  'use strict';
   var previousPrevious = 0;
   var previous = 0;
   var current = 1;

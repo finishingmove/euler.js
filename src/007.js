@@ -7,6 +7,11 @@
 //
 //What is the 10001st prime number?
 
+/**
+ *
+ * @param {Number} n
+ * @returns {nthPrimeNumber.next|nthPrimeNumber.current}
+ */
 (function nthPrimeNumber(n) {
   'use strict';
   var count = 1;

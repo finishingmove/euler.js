@@ -11,6 +11,7 @@
  * @returns {Number}
  */
 (function sumOfMultiples(limit, paramList) {
+  'use strict';
   var result = 0;
   for (var i = 1; i < limit; i++) {
     for (var j = 0, length = paramList.length; j < length; j++) {

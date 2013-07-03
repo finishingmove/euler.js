@@ -5,7 +5,12 @@
 //
 //Find the largest palindrome made from the product of two 3-digit numbers.
 
-function main() {
+/**
+ *
+ * @returns {Number}
+ */
+(function main() {
+  'use strict';
   var isPalindrome = false;
   var current = 0;
   var max = 0;
@@ -19,4 +24,4 @@ function main() {
     }
   }
   return max;
-}
+})();
