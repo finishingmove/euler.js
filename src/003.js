@@ -15,6 +15,7 @@
   var getPrimeFactors = function(number) {
     var factors = [];
     var result = 2;
+    // result space is 2 <= x <= sqrt(number)
     var limit = Math.ceil(Math.sqrt(number));
     while (result <= limit) {
       if (number % result) {
@@ -25,6 +26,8 @@
         factors.push(result);
       }
     }
+    // won't be reached since we go only up to sqrt(number)
+    // but if it's not 1, it's a prime number
     if (number !== 1) {
       factors.push(number);
     }
