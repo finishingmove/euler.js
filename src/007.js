@@ -26,7 +26,7 @@
     if (isPrime) {
       primes.push(next);
     }
-    next += 1;
+    next % 2 ? next += 2 : next += 1;
   }
   return primes[primes.length - 1];
 })(10001);
