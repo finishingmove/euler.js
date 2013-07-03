@@ -13,6 +13,8 @@
  * @returns {nthPrimeNumber.next|nthPrimeNumber.current}
  */
 (function nthPrimeNumber(n) {
+  // TODO refactor into nPrimeNumbers -> nTh
+  // also imeplement isPrime()
   'use strict';
   var count = 1;
   var current = 2;
