@@ -24,4 +24,3 @@
   }
   return Math.max(result, number);
 })(600851475143);
-
