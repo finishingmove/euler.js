@@ -12,15 +12,25 @@
  */
 (function largestPrimeFactor(number) {
   'use strict';
-  var result = 2;
-  var limit = Math.ceil(Math.sqrt(number));
-  while (result <= limit) {
-    if (number % result) {
-      result > 2 ? result += 2 : result = 3;
-    } else {
-      number /= result;
-      limit = Math.ceil(Math.sqrt(number));
+  var getPrimeFactors = function(number) {
+    var factors = [];
+    var result = 2;
+    var limit = Math.ceil(Math.sqrt(number));
+    while (result <= limit) {
+      if (number % result) {
+        result > 2 ? result += 2 : result = 3;
+      } else {
+        number /= result;
+        limit = Math.ceil(Math.sqrt(number));
+        factors.push(result);
+      }
     }
-  }
-  return Math.max(result, number);
+    if (number !== 1) {
+      factors.push(number);
+    }
+    return factors;
+  };
+  return getPrimeFactors(number).reduce(function(current, next) {
+    return current > next ? current : next;
+  }, 0);
 })(600851475143);
