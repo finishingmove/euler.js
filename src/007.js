@@ -12,11 +12,13 @@
   var count = 1;
   var current = 2;
   var next;
+  var limit;
   var isPrime;
   while (count <= n) {
     next = next || current;
     isPrime = true;
-    for (var i = 2; i < next; i++) {
+    limit = Math.floor(Math.sqrt(next)) + 1;
+    for (var i = 2; i < limit; i++) {
       if (next % i === 0) {
         isPrime = false;
         break;
