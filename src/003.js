@@ -33,7 +33,5 @@
     }
     return factors;
   };
-  return getPrimeFactors(number).reduce(function(current, next) {
-    return current > next ? current : next;
-  }, 0);
+  return Math.max.apply(null, getPrimeFactors(number));
 })(600851475143);
