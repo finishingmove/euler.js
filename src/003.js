@@ -11,14 +11,10 @@
  * @returns {Number}
  */
 (function largestPrimeFactor(number) {
+  'use strict';
   var result = 2;
   while (number > result) {
-    if (number % result !== 0) {
-      result++;
-    }
-    if (number % result === 0) {
-      number = number / result;
-    }
+    number % result ? result > 2 ? result += 2 : result += 1 : number /= result;
   }
-  return result;
+  return result > number ? result : number;
 })(600851475143);
