@@ -21,8 +21,9 @@
 // 05886116467109405077541002256983155200055935729725
 // 71636269561882670428252483600823257530420752963450
 
-function main() {
-  var sequence = '73167176531330624919225119674426574742355349194934' +
+(function greatestProductOfFiveConsecutive() {
+  var sequence =
+    '73167176531330624919225119674426574742355349194934' +
     '96983520312774506326239578318016984801869478851843' +
     '85861560789112949495459501737958331952853208805511' +
     '12540698747158523863050715693290963295227443043557' +
@@ -42,16 +43,14 @@ function main() {
     '84580156166097919133875499200524063689912560717606' +
     '05886116467109405077541002256983155200055935729725' +
     '71636269561882670428252483600823257530420752963450';
-
   var length = sequence.length;
-  var i = 0;
-  var excerpt = '';
+  var section = '';
   var product = 0;
   var greatestProduct = 0;
-  for (i; i < length; i++) {
-    excerpt = sequence.substr(i, 5);
-    if (excerpt.indexOf('0') === -1) {
-      product = excerpt.split('').reduce(function(current, next) {
+  for (var i = 0; i < length; i++) {
+    section = sequence.substr(i, 5);
+    if (section.indexOf('0') === -1) {
+      product = section.split('').reduce(function(current, next) {
         return +current * +next;
       });
       if (greatestProduct < product) {
@@ -60,4 +59,4 @@ function main() {
     }
   }
   return greatestProduct;
-}
+})();
